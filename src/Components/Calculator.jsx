@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './calculator.css';
 const Calculator = () => {
-  const [result, setResult] = useState("");
+  let [result, setResult] = useState("");
 
   const handleClick = (e) => {
+    if (result.charAt(0) === '0') {
+      result = result.slice(1, result.length)
+    }
     setResult(result.concat(e.target.name));
   }
 
@@ -17,8 +20,12 @@ const Calculator = () => {
   const calculate = () => {
     try {
       let output = eval(result).toString();
-      output = output.slice(0, 15);
-      console.log(output);
+      if (output.length > 15){
+        console.log("hello")
+        setResult("Error");
+        return;
+      }
+      output = output.slice(0, 16);
       setResult(output);
     } catch (err) {
       setResult("Error");

@@ -8,19 +8,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: #9cecfb; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2969cf,
-    #65c7f7,
-    #9cecfb
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4374c3,
-    #65c7f7,
-    #9cecfb
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #9cecfb;
+  background: -webkit-linear-gradient(to right, #2969cf, #65c7f7, #9cecfb);
+  background: linear-gradient(to right, #4374c3, #65c7f7, #9cecfb);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -31,4 +21,19 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  animation: myanimation 20s infinite;
 }
+/* @keyframes myanimation {
+  0% {background: linear-gradient(to right, #5c7caf, #72ccf8, #8de8f8);}
+  10%{background:linear-gradient(to right, #6883b1, #76c9f3, #95ebf8);}
+  20%{background:linear-gradient(to right, #5e7599, #70b6d8, #8bcad6);}
+  30%{background:linear-gradient(to right, #57739f, #76c5ec, #90e2f0);}
+  40% {background: linear-gradient(to right, #4a6795, #70caf7, #7fe5f7);}
+  50% {background: linear-gradient(to right, #5c7caf, #72ccf8, #8de8f8);}
+  60%{background:linear-gradient(to right, #6883b1, #76c9f3, #95ebf8);}
+  70%{background:linear-gradient(to right, #5e7599, #70b6d8, #8bcad6);}
+  80%{background:linear-gradient(to right, #57739f, #76c5ec, #90e2f0);}
+  90% {background: linear-gradient(to right, #4a6795, #70caf7, #7fe5f7);}
+  100% {background: linear-gradient(to right, #5c7caf, #72ccf8, #8de8f8);}
+
+} */

@@ -56,9 +56,4 @@ button {
   font-size: 20px;
 }
 
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
+
