@@ -4,6 +4,10 @@ const Calculator = () => {
   let [result, setResult] = useState("");
 
   const handleClick = (e) => {
+    if(result.length >=16){
+      setResult("!So Much Big Input");
+      return;
+    }
     if (result.charAt(0) === '0') {
       result = result.slice(1, result.length)
     }
@@ -21,7 +25,6 @@ const Calculator = () => {
     try {
       let output = eval(result).toString();
       if (output.length > 15){
-        console.log("hello")
         setResult("Error");
         return;
       }
