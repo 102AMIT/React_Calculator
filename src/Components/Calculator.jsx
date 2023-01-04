@@ -23,13 +23,15 @@ const Calculator = () => {
 
   const calculate = () => {
     try {
-      let output = eval(result).toString();
-      if (output.length > 15){
-        setResult("Error");
-        return;
+      result=eval(result).toString()
+      if(result.includes('.')){
+        result=+ eval(result);
+        result=result.toFixed(4).toString();
+        setResult(result);
+      }else{
+        setResult(eval(result).toString());
       }
-      output = output.slice(0, 16);
-      setResult(output);
+      
     } catch (err) {
       setResult("Error");
     }
